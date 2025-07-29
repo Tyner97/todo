@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Form</title>
+</head>
+<body>
+    <h2>Add / Edit Task</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'task_list' %}">Back</a>
+</body>
+</html>
